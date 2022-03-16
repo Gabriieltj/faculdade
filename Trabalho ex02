@@ -1,0 +1,79 @@
+valor_cod100 = 9.00 
+valor_cod101 = 11.00
+valor_cod102 = 12.00
+valor_cod103 = 12.00
+valor_cod104 = 14.00
+valor_cod105 = 17.00
+valor_cod200 = 5.00
+valor_cod201 = 4.00
+
+prod_cod100 = "Cachorro-quente"
+prod_cod101 = "Cachorro-quente Duplo"
+prod_cod102 = "X-Egg"
+prod_cod103 = "X-Salada"
+prod_cod104 = "X-Bacon"
+prod_cod105 = "X-Tudo"
+prod_cod200 = "Refrigerante Lata"
+prod_cod201 = "Chá Gelado"
+
+print('Bem vindo a Lanchonete do Gabriel Lisboa de Miranda Gonzalez')
+print(15 * '*' + ' Cardápío ' + 15 * '*')
+print('| CÓDIGO |       DESCRIÇÃO      | VALOR |')
+print('|   100  |    CACHORRO QUENTE   |  9,00 |')
+print('|   101  | CACHORRO QUENTE DUPLO| 11,00 |')
+print('|   102  |         X-EGG        | 12,00 |')
+print('|   103  |        X-SALADA      | 12,00 |')
+print('|   104  |        X-BACON       | 14,00 |')
+print('|   105  |         X-TUDO       | 17,00 |')
+print('|   200  |   REFRIGERANTE LATA  |  5,00 |')
+print('|   201  |       CHÁ GELADO     |  4,00 |')
+print(41 * '-')
+
+soma = 0 
+
+while True:
+
+  cod = int(input('Entre com o código desejado: '))
+
+  if ( ( (cod >= 100) and (cod <= 105) ) or ( (cod >= 200) and (cod <= 201) )):
+    if cod == 100:
+      print('Você pediu um {} no valor de {}'.format(prod_cod100, valor_cod100))
+      soma = soma + valor_cod100
+    elif cod == 101:
+      print('Você pediu um {} no valor de {}'.format(prod_cod101, valor_cod101))
+      soma = soma + valor_cod101
+    elif cod == 102:
+      print('Você pediu um {} no valor de {}'.format(prod_cod102, valor_cod102))
+      soma = soma + valor_cod102
+    elif cod == 103:
+      print('Você pediu um {} no valor de {}'.format(prod_cod103, valor_cod103))
+      soma = soma + valor_cod103
+    elif cod == 104:
+      print('Você pediu um {} no valor de {}'.format(prod_cod104, valor_cod104))
+      soma = soma + valor_cod104
+    elif cod == 105:
+      print('Você pediu um {} no valor de {}'.format(prod_cod105, valor_cod105))
+      soma = soma + valor_cod105
+    elif cod == 200:
+      print('Você pediu um {} no valor de {}'.format(prod_cod200, valor_cod200))
+      soma = soma + valor_cod200
+    elif cod == 201:
+      print('Você pediu um {} no valor de {}'.format(prod_cod201, valor_cod201))
+      soma = soma + valor_cod201
+
+    print('Deseja pedir mais alguma coisa?')
+    opcao = int(input('1 - sim\n0 - Não\n'))
+    #fica num loop eqnuanto a pessoa n digitar um valor que seja 0 ou 1
+    while (opcao != 0 and opcao != 1 ):
+      print('Você digitou uma opção inválida!')
+      print('Deseja pedir mais alguma coisa?')
+      opcao = int(input('1 - sim\n0 - Não\n'))
+      
+    if opcao == 0: 
+      break
+    
+  else:
+    print('Opção Inválida')
+    continue
+ 
+print('O total a ser pago é {}'.format(soma))
