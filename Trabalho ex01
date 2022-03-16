@@ -1,0 +1,44 @@
+# valor = Valor do produto unitario
+# qtde = Quantidade de protudos un
+# total = valor da compra sem desconto
+# desconto = valor do desconto
+# resultado = resultado final com desconto
+
+import time
+#Bliblioteca para função sleep.
+
+print('Bem vindo a loja do Gabriel Lisboa de Miranda Gonzalez')
+print('Boas compras!')
+valor = float(input('Qual o valor o produto? R$: '))
+qtde = int(input('Qual o valor da quantidade? R$ '))
+total = qtde * valor
+
+if qtde >= 10 and qtde <= 99:
+    #Formula para desconto de 5%
+    desconto5 = total * 5 / 100
+    resultado5 = total - desconto5
+    print('Calculando...')
+    time.sleep(2)
+    print('O valor sem desconto é de R$ {:.2f}'.format(total))
+    print('O valor com desconto é de R$ {:.2f}  (\033[031mdesconto de 5%\033[m)'.format(resultado5))
+
+elif qtde >= 100 and qtde <= 999:
+    #Formula para desconto de 10%
+    desconto10 = total * 10 / 100
+    resultado10 = total - desconto10
+    print('Calculando...')
+    time.sleep(2)
+    print('O valor sem desconto é de R$ {:.2f}'.format(total))
+    print('O valor com desconto é de R$ {:.2f} (\033[031mdesconto de 10%\033[m)'.format(resultado10))
+
+elif qtde >= 1000:
+    #Formula para desconto de 15%
+    desconto15 = total * 15 / 100
+    resultado15 = total - desconto15
+    print('Calculando...')
+    time.sleep(2)
+    print('O valor sem desconto é de R$ {:.2f}'.format(total))
+    print('O valor com desconto é de R$ {:.2f} (\033[031mdesconto de 15%\033[m)'.format(resultado15))
+
+else:
+    print('O valor da compra é de R$ {:.2f}'.format(total))
