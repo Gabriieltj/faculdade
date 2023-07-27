@@ -1,18 +1,1 @@
-import  time
-import random
-nome = str(input('Qual seu nome? '))
-idade = int(input('Qual a sua idade? '))
-m = random.randint(1, 15)
 
-if idade >= 18:
-  print('Prazer {}. Você tem {}, anos e está liberado para acessar o conteúdo.'.format(nome, idade))
-  print('Para começar, precisamos saber por qual região você gostaria de pesquisar por mulheres.')
-  cidade = input('Qual cidade você mora? ')
-  bairro = input('Qual bairro onde você mora? ')
-  print('Pesquisando por mulheres na região de {}. Aguarde...'.format(bairro))
-  time.sleep(5)
-  
-  print('Há {} mulheres perto de {}, {}.'.format(m, bairro, cidade))
-
-else:
-    print('\033[031mConteúdo apenas para maiores de 18 anos. Programa encerrado!')
